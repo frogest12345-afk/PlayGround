@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#101c2f" />
+  <title>Blockbound — Pocket Worlds</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">▰</span><span>POCKET WORLDS</span><i>CREATIVE SURVIVAL</i></div>
+      <div class="top-actions"><span class="save-state"><b></b> WORLD SAVED</span><button class="icon-button" id="soundBtn" aria-label="Toggle sound">♫</button><button class="icon-button" id="helpBtn" aria-label="Controls">?</button></div>
+    </header>
+    <section class="game-frame" aria-label="2D block world game">
+      <div class="screen-glow"></div>
+      <canvas id="game" width="960" height="540" aria-label="Game world"></canvas>
+      <div class="hud-top">
+        <div class="world-card"><span class="sun-icon">☀</span><div><strong>GREENHOLLOW</strong><small>DAY <span id="dayNum">01</span> <em>·</em> PEACEFUL</small></div></div>
+        <div class="status-pills"><span>♥ <i id="health">100</i></span><span>✦ <i id="xp">0</i></span></div>
+      </div>
+      <div class="crosshair" id="crosshair">＋</div>
+      <div class="toast" id="toast">A new world awaits</div>
+      <div class="hotbar-wrap"><div class="hotbar" id="hotbar"></div><div class="hotbar-hint"><kbd>1</kbd>–<kbd>6</kbd> SELECT <span>·</span> <kbd>F</kbd> FULLSCREEN</div></div>
+      <div class="touch-controls" aria-label="Touch controls">
+        <div class="dpad"><button data-key="a" aria-label="Move left">◀</button><button data-key="w" aria-label="Jump">▲</button><button data-key="d" aria-label="Move right">▶</button></div>
+        <div class="touch-actions"><button data-action="mine">MINE</button><button data-action="place">PLACE</button></div>
+      </div>
+      <div class="start-screen" id="startScreen">
+        <div class="start-panel">
+          <div class="pixel-cube"><span></span></div>
+          <p class="eyebrow">A LITTLE WORLD, ALL YOURS</p>
+          <h1>BLOCK<span>BOUND</span></h1>
+          <p class="intro">Dig deep. Build anything.<br />Make this pocket-sized world your own.</p>
+          <button class="play-button" id="playBtn">ENTER YOUR WORLD <span>▶</span></button>
+          <div class="start-meta"><span>✦ ENDLESS SANDBOX</span><span>◆ NO WRONG WAY TO PLAY</span></div>
+        </div>
+        <div class="start-version">POCKET WORLDS <b>v1.0</b></div>
+      </div>
+      <div class="modal hidden" id="helpModal">
+        <div class="modal-card"><button class="close-modal" id="closeHelp">×</button><p class="eyebrow">QUICK FIELD GUIDE</p><h2>Make your mark.</h2>
+          <div class="guide-grid"><div><b>MOVE</b><span><kbd>A</kbd> <kbd>D</kbd> or <kbd>←</kbd> <kbd>→</kbd></span></div><div><b>JUMP</b><span><kbd>W</kbd> / <kbd>SPACE</kbd></span></div><div><b>BREAK</b><span>Point &amp; hold <kbd>CLICK</kbd></span></div><div><b>PLACE</b><span><kbd>RIGHT CLICK</kbd></span></div><div><b>SELECT</b><span><kbd>1</kbd>–<kbd>6</kbd> or scroll</span></div><div><b>TOUCH</b><span>Use the on-screen controls</span></div></div>
+          <p class="guide-note">Gather blocks from the land, then place them back into the world. You can always start fresh.</p>
+        </div>
+      </div>
+      <div class="bottom-overlay"><span>WORLD 01 <i>•</i> THE MEADOWS</span><span>▲ <b id="coord">X: 000</b> <i>•</i> AUTOSAVE ON</span></div>
+    </section>
+    <footer class="footer"><span>◈ <b>YOUR WORLD, YOUR RULES</b></span><span>EXPLORE <i>·</i> CREATE <i>·</i> REPEAT</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
